@@ -1,0 +1,73 @@
+\hypertarget{class_y_d_lidar}{}\section{Y\+D\+Lidar Class Reference}
+\label{class_y_d_lidar}\index{Y\+D\+Lidar@{Y\+D\+Lidar}}
+
+
+Collaboration diagram for Y\+D\+Lidar\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{class_y_d_lidar__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries S\+E\+R\+I\+A\+L\+\_\+\+B\+A\+U\+D\+R\+A\+TE} = 115200, 
+{\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+O\+UT} = 500
+ \}\hypertarget{class_y_d_lidar_a93fcca770d136acd68615c077fb98fac}{}\label{class_y_d_lidar_a93fcca770d136acd68615c077fb98fac}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries begin} (Hardware\+Serial \&serialobj, uint32\+\_\+t baudrate=S\+E\+R\+I\+A\+L\+\_\+\+B\+A\+U\+D\+R\+A\+TE)\hypertarget{class_y_d_lidar_a0c1a66b457d67fb465a82da15151bd02}{}\label{class_y_d_lidar_a0c1a66b457d67fb465a82da15151bd02}
+
+\item 
+void {\bfseries end} (void)\hypertarget{class_y_d_lidar_ab4f3a968e28e50745a86e3486570785f}{}\label{class_y_d_lidar_ab4f3a968e28e50745a86e3486570785f}
+
+\item 
+bool {\bfseries is\+Open} (void)\hypertarget{class_y_d_lidar_a114d6d4058d579e040ca2f5d4541bee9}{}\label{class_y_d_lidar_a114d6d4058d579e040ca2f5d4541bee9}
+
+\item 
+result\+\_\+t {\bfseries get\+Health} (\hyperlink{structdevice__health}{device\+\_\+health} \&health, uint32\+\_\+t timeout=D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+O\+UT)\hypertarget{class_y_d_lidar_aa85946476d601c558aea46ebf022dda3}{}\label{class_y_d_lidar_aa85946476d601c558aea46ebf022dda3}
+
+\item 
+result\+\_\+t {\bfseries get\+Device\+Info} (\hyperlink{structdevice__info}{device\+\_\+info} \&info, uint32\+\_\+t timeout=D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+O\+UT)\hypertarget{class_y_d_lidar_af39b9bbeb498209ef5d5a301e58815c7}{}\label{class_y_d_lidar_af39b9bbeb498209ef5d5a301e58815c7}
+
+\item 
+result\+\_\+t {\bfseries stop} (void)\hypertarget{class_y_d_lidar_a56dbcd8ca1e2b2b569f34189d69263a2}{}\label{class_y_d_lidar_a56dbcd8ca1e2b2b569f34189d69263a2}
+
+\item 
+result\+\_\+t {\bfseries start\+Scan} (bool force=false, uint32\+\_\+t timeout=D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+O\+UT $\ast$2)\hypertarget{class_y_d_lidar_ab94a06ee3862b4100a97c0d25dce88b5}{}\label{class_y_d_lidar_ab94a06ee3862b4100a97c0d25dce88b5}
+
+\item 
+result\+\_\+t {\bfseries wait\+Scan\+Dot} (uint32\+\_\+t timeout=D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+O\+UT)\hypertarget{class_y_d_lidar_ac4504ab865582884e27ba181acea6e10}{}\label{class_y_d_lidar_ac4504ab865582884e27ba181acea6e10}
+
+\item 
+const \hyperlink{structscan_point}{scan\+Point} \& {\bfseries get\+Current\+Scan\+Point} (void)\hypertarget{class_y_d_lidar_a704a5a434bb3022c9f169ab74ad90898}{}\label{class_y_d_lidar_a704a5a434bb3022c9f169ab74ad90898}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+result\+\_\+t {\bfseries send\+Command} (uint8\+\_\+t cmd, const void $\ast$payload=N\+U\+LL, size\+\_\+t payloadsize=0)\hypertarget{class_y_d_lidar_a440f59fce948f0fe000d8eee48d561c3}{}\label{class_y_d_lidar_a440f59fce948f0fe000d8eee48d561c3}
+
+\item 
+result\+\_\+t {\bfseries wait\+Response\+Header} (\hyperlink{structlidar__ans__header}{lidar\+\_\+ans\+\_\+header} $\ast$header, uint32\+\_\+t timeout=D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+O\+UT)\hypertarget{class_y_d_lidar_a05781f62737fead3f02990dfb08aadb5}{}\label{class_y_d_lidar_a05781f62737fead3f02990dfb08aadb5}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Hardware\+Serial $\ast$ {\bfseries \+\_\+bined\+\_\+serialdev}\hypertarget{class_y_d_lidar_aaf9925e4f8109c6b52cbd0d61df274c7}{}\label{class_y_d_lidar_aaf9925e4f8109c6b52cbd0d61df274c7}
+
+\item 
+\hyperlink{structscan_point}{scan\+Point} {\bfseries point}\hypertarget{class_y_d_lidar_aa6104f0063758211b29f7dece4e158d9}{}\label{class_y_d_lidar_aa6104f0063758211b29f7dece4e158d9}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Y\+D\+Lidar.\+h\item 
+Y\+D\+Lidar.\+cpp\end{DoxyCompactItemize}

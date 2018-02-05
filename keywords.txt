@@ -1,0 +1,18 @@
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+scanDot	KEYWORD1
+YDLidar	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin	KEYWORD2
+end	KEYWORD2
+isOpen	KEYWORD2
+getHealth	KEYWORD2
+getDeviceInfo	KEYWORD2
+stop	KEYWORD2
+startScan	KEYWORD2
+waitScanDot	KEYWORD2
+getCurrentScanPoint	KEYWORD2
